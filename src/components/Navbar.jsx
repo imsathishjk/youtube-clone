@@ -22,7 +22,7 @@ const Navbar = () => {
                 <div className='flex gap-5 items-center'>
                     <RiMenu5Fill onClick={() => setShowSidebar(!showSidebar)} className='block lg:hidden text-xl font-bold cursor-pointer' />
                     <RiMenu5Fill onClick={() => setSidebar(!sidebar)} className='hidden lg:block text-xl font-bold cursor-pointer' />
-                    <div onClick={() => navigate('/', scrollTo(0, 0))} className='flex gap-2 items-center cursor-pointer cursor-pointer'>
+                    <div onClick={() => navigate('/', scrollTo(0, 0))} className='flex gap-2 items-center cursor-pointer'>
                         <GrYoutube className='text-xl text-red-500' />
                         <h1 className='text-xl font-bold md:text-2xl'>Premium</h1>
                     </div>

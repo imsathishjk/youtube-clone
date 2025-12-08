@@ -27,6 +27,7 @@ export const AppContextProvider = ({ children }) => {
 
 
 
+
     const handleMonth = (date) => {
         const newDate = new Date(date);
         const day = newDate.getUTCDate();

@@ -40,7 +40,7 @@ const Category = () => {
 
 
   return (
-    <div className={`z-0 overflow-x-scroll no-scroll lg:${sidebar ? 'basis-[80%]' : 'basis-[90%]'}`}>
+    <div className={`z-0 overflow-x-scroll no-scroll ${sidebar ? 'basis-[90%]' : 'basis-[95%]'}`}>
       <div className='flex justify-between items-center gap-5 overflow-x-scroll no-scroll mt-5'>
         {
           categoryData?.map((item, index) => {

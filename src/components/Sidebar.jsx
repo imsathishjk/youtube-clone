@@ -11,9 +11,8 @@ const Sidebar = () => {
 
   return (
     <div className={`h-[100vh] overflow-y-scroll no-scroll sticky top-0 max-lg:fixed max-lg:top-3 max-lg:mt-12 transition-all ease-in-out duration-500
-    z-10 bg-black max-lg:px-4 lg:${sidebar ? 'basis-[15%]' : 'basis-[5%]'}
-    ${showSidebar ? 'left-0 w-48' : '-left-40'}
-    `}>
+    z-10 bg-black max-lg:px-4 ${sidebar ? 'basis-[10%]' : 'basis-[5%]'}
+    ${showSidebar ? 'left-0 w-48' : '-left-40'}`}>
       <div className='flex flex-col gap-5'>
         {menuLists.map((menu) => {
           return (
