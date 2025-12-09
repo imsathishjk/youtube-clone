@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import profile from '../assets/images/vijay (2).jpg';
 import { GoBell } from "react-icons/go";
 import { FaRegThumbsUp } from "react-icons/fa";
@@ -7,7 +7,11 @@ import { FaRegBookmark } from "react-icons/fa";
 import { HiDotsHorizontal } from "react-icons/hi";
 import { PiShareFat } from "react-icons/pi";
 import { converter } from '../../convert';
+import { FaThumbsUp } from "react-icons/fa";
+import { FaThumbsDown } from "react-icons/fa";
 const VideoLable = ({ likes, channelTitle, channelImg, subscribers }) => {
+    const [like, setLike] = useState(false);
+    const [Dislike, setDislike] = useState(false);
     return (
         <div className='flex flex-col md:flex-row md:items-center justify-between my-5'>
             <div className='flex items-center gap-4'>
@@ -24,7 +28,7 @@ const VideoLable = ({ likes, channelTitle, channelImg, subscribers }) => {
                 </div>
             </div>
             <div className='flex gap-5 items-center max-md:mt-3'>
-                <button className='flex items-center gap-2 font-semibold'><FaRegThumbsUp className='md:text-lg' /> <span>{converter(likes)}</span> <span className='text-gray-500'>|</span> <FaRegThumbsDown className='md:text-lg' /> </button>
+                <button className='flex items-center gap-2 font-semibold transition-all duration-300 ease-in-out'>{like ? <FaThumbsUp className='text-blue-500 cursor-pointer' onClick={() => setLike(false)} /> : <FaRegThumbsUp onClick={() => setLike(true)} className='cursor-pointer' />}<span>{converter(likes)}</span> <span className='text-gray-500'>|</span>{Dislike ? <FaThumbsDown onClick={() => setDislike(false)} className='cursor-pointer text-red-500' /> : <FaRegThumbsDown onClick={() => setDislike(true)} className='cursor-pointer' />} </button>
                 <div className='flex items-center gap-5'>
                     <button className='flex items-center gap-1.5 font-semibold'><PiShareFat className='text-xl' /></button>
                     <button><FaRegBookmark /></button>

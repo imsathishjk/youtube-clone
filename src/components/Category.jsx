@@ -15,7 +15,6 @@ const Category = () => {
   const fetchCategories = async () => {
     try {
       const { data } = await axios.get(CATEGORIES_URL);
-      console.log(data);
       setCategoryData(data.items);
     } catch (err) {
       console.log(err)
@@ -43,7 +42,7 @@ const Category = () => {
     <div className={`z-0 overflow-x-scroll no-scroll basis-full ${sidebar ? 'basis-[90%]' : 'basis-[95%]'}`}>
       <div className='flex justify-between items-center gap-5 overflow-x-scroll no-scroll mt-5'>
         {
-          categoryData?.map((item, index) => {
+          categoryData.map((item, index) => {
             return <button onClick={() => setCategory(item.id)}
               className={`text-sm font-semibold text-nowrap cursor-pointer rounded-full p-2 md:p-2.5 transition-all duration-300 ease-in-out border-none
             ${category == item.id ? 'bg-red-600 text-white' : 'bg-white text-gray-700'}
