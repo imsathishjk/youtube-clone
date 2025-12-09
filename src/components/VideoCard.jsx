@@ -45,10 +45,10 @@ const VideoCard = ({ duration, thumbnail, title, channelName, views, published, 
                 {channelData ? <img src={channelData[0]?.id == channelId ? channelData[0].snippet.thumbnails.high.url || channelData[0].snippet.thumbnails.medium.url || channelData[0].snippet.default.url : profile} alt={channelName} className='w-9 h-9 rounded-full' /> : <ShimmerCircularImage size={30} />}
                 <div>
                     {/* <h1 className='max-lg:hidden text-sm font-bold'>{title ? title : <ShimmerTitle line={1} />}</h1> */}
-                    {title ? <h1 className='text-sm font-bold'>{title.slice(0, 42)}</h1> : <ShimmerText line={1} />}
-                    <p className='text-sm text-wrap font-semibold text-gray-400 flex flex-wrap items-center'>{channelName ? channelName : <ShimmerText line={1} />}
-                        <span><PiLineVerticalBold /></span><span>{views ? converter(views) : <ShimmerText line={1} />} views</span>
-                        <span><PiLineVerticalBold /></span> <span>{published ? moment(published).fromNow() : <ShimmerText line={1} />}</span> </p>
+                    {title ? <h1 className='text-sm font-bold'>{title.slice(0, 42)}</h1> : <ShimmerText className='text-gray-600' line={1} />}
+                    <p className='text-sm text-wrap font-semibold text-gray-400 flex flex-wrap items-center'>{channelName ? channelName : <ShimmerText className='text-gray-600' line={1} />}
+                        <span><PiLineVerticalBold /></span><span>{views ? converter(views) + 'views' : <ShimmerText className='text-gray-600' line={1} />} </span>
+                        <span><PiLineVerticalBold /></span> <span>{published ? moment(published).fromNow() : <ShimmerText className='text-gray-600' line={1} />}</span> </p>
                 </div>
             </div>
         </div>
