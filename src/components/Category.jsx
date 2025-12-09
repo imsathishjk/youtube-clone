@@ -40,7 +40,7 @@ const Category = () => {
 
   return (
     <div className={`z-0 overflow-x-scroll no-scroll basis-full ${sidebar ? 'basis-[90%]' : 'basis-[95%]'}`}>
-      <div className='flex justify-between items-center gap-5 overflow-x-scroll no-scroll mt-5'>
+      <div className='flex justify-between items-center gap-5 overflow-x-scroll no-scroll'>
         {
           categoryData.map((item, index) => {
             return <button onClick={() => setCategory(item.id)}
@@ -50,7 +50,7 @@ const Category = () => {
           })
         }
       </div>
-      <div className='mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-2 place-items-center'>
+      <div className='mt-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-2 place-items-center'>
         {
           videos.map((video, i) => {
             return <VideoCard key={i} id={video.id} title={video.snippet.title} channelName={video?.snippet?.channelTitle}

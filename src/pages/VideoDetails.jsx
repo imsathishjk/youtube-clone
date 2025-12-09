@@ -71,7 +71,7 @@ const VideoDetails = () => {
 
 
     return (
-        <div className='pt-20 px-4 relative'>
+        <div className='pt-16 px-4 relative'>
             <div className='flex flex-col lg:flex-row lg:justify-between gap-5 lg:items-start'>
                 <div className='lg:basis-[55%] xl:basis-[65%]'>
                     {/* Video Details sticky top-12 */}
